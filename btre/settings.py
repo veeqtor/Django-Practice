@@ -151,3 +151,9 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = os.getenv('SMTP_USER')
 EMAIL_HOST_PASSWORD = os.getenv('SMTP_PASSWORD')
 EMAIL_USE_TlS = True
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
